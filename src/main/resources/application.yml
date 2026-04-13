@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+
+app:
+  jwtSecret: "CHANGE_ME_TO_A_LONG_RANDOM_SECRET_32+"
+  uploadDir: "./uploads"
