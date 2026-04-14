@@ -1,5 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.platform</groupId>
@@ -11,6 +12,7 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>3.2.5</version>
+    <relativePath/>
   </parent>
 
   <properties>
@@ -18,11 +20,13 @@
   </properties>
 
   <dependencies>
+    <!-- Web -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+    <!-- Validation -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-validation</artifactId>
@@ -34,14 +38,14 @@
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
-    <!-- Kingbase JDBC Driver（需要你本地 mvn install:install-file 安装） -->
+    <!-- Kingbase JDBC Driver (installed to local Maven repo via mvn install:install-file) -->
     <dependency>
       <groupId>com.kingbase</groupId>
       <artifactId>kingbase8</artifactId>
       <version>9.0.0</version>
     </dependency>
 
-    <!-- Kingbase Hibernate Dialect（需要你本地 mvn install:install-file 安装） -->
+    <!-- Kingbase Hibernate dialect jar (installed to local Maven repo via mvn install:install-file) -->
     <dependency>
       <groupId>com.kingbase</groupId>
       <artifactId>kingbase-hibernate62-dialect</artifactId>
@@ -76,4 +80,5 @@
       </plugin>
     </plugins>
   </build>
+
 </project>
