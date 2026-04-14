@@ -7,6 +7,25 @@ spring:
       max-file-size: 30MB
       max-request-size: 30MB
 
+  datasource:
+    driver-class-name: com.kingbase8.Driver
+    url: jdbc:kingbase8://127.0.0.1:54321/xiaochengxu
+    username: xiaochengxu
+    password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.tool.schema: debug
+
 app:
-  jwtSecret: "CHANGE_ME_TO_A_LONG_RANDOM_SECRET_32+"
+  jwtSecret: "xiaochengxu_jwt_secret_2026_very_long_key_please_change_64_chars!"
   uploadDir: "./uploads"
